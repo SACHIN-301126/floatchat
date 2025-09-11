@@ -1,0 +1,335 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* Ocean Theme Color Palette */
+  --ocean-blue: #1E3A8A;
+  --ocean-blue-light: #3B82F6;
+  --ocean-blue-dark: #1E40AF;
+  --cyan-teal: #06B6D4;
+  --cyan-teal-light: #22D3EE;
+  --cyan-teal-dark: #0891B2;
+  --coral-orange: #F97316;
+  --coral-orange-light: #FB923C;
+  --coral-orange-dark: #EA580C;
+  --soft-grey: #F1F5F9;
+  --dark-navy: #0F172A;
+  --dark-navy-light: #1E293B;
+  --dark-navy-darker: #020617;
+  
+  /* Base Colors */
+  --background: var(--dark-navy);
+  --foreground: var(--soft-grey);
+  --card: var(--dark-navy-light);
+  --card-foreground: var(--soft-grey);
+  --popover: var(--dark-navy-light);
+  --popover-foreground: var(--soft-grey);
+  --primary: var(--ocean-blue);
+  --primary-foreground: var(--soft-grey);
+  --secondary: var(--cyan-teal);
+  --secondary-foreground: var(--dark-navy);
+  --muted: #334155;
+  --muted-foreground: #94A3B8;
+  --accent: var(--cyan-teal);
+  --accent-foreground: var(--dark-navy);
+  --destructive: var(--coral-orange);
+  --destructive-foreground: var(--soft-grey);
+  --border: rgba(148, 163, 184, 0.2);
+  --input: rgba(148, 163, 184, 0.1);
+  --input-background: rgba(30, 41, 59, 0.5);
+  --switch-background: #475569;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: var(--cyan-teal);
+  
+  /* Chart Colors - Ocean Theme */
+  --chart-1: var(--ocean-blue);
+  --chart-2: var(--cyan-teal);
+  --chart-3: var(--ocean-blue-light);
+  --chart-4: var(--coral-orange);
+  --chart-5: var(--cyan-teal-light);
+  
+  /* Enhanced Radius for Glassmorphism */
+  --radius: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  
+  /* Sidebar Ocean Theme */
+  --sidebar: var(--dark-navy-light);
+  --sidebar-foreground: var(--soft-grey);
+  --sidebar-primary: var(--ocean-blue);
+  --sidebar-primary-foreground: var(--soft-grey);
+  --sidebar-accent: rgba(6, 182, 212, 0.1);
+  --sidebar-accent-foreground: var(--cyan-teal);
+  --sidebar-border: rgba(148, 163, 184, 0.2);
+  --sidebar-ring: var(--cyan-teal);
+  
+  /* Glassmorphism Effects */
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(148, 163, 184, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.dark {
+  /* Enhanced Dark Ocean Theme */
+  --background: var(--dark-navy);
+  --foreground: var(--soft-grey);
+  --card: var(--dark-navy-light);
+  --card-foreground: var(--soft-grey);
+  --popover: var(--dark-navy-light);
+  --popover-foreground: var(--soft-grey);
+  --primary: var(--ocean-blue);
+  --primary-foreground: var(--soft-grey);
+  --secondary: var(--cyan-teal);
+  --secondary-foreground: var(--dark-navy);
+  --muted: #334155;
+  --muted-foreground: #94A3B8;
+  --accent: var(--cyan-teal);
+  --accent-foreground: var(--dark-navy);
+  --destructive: var(--coral-orange);
+  --destructive-foreground: var(--soft-grey);
+  --border: rgba(148, 163, 184, 0.2);
+  --input: rgba(148, 163, 184, 0.1);
+  --ring: var(--cyan-teal);
+  
+  /* Enhanced Chart Colors */
+  --chart-1: var(--ocean-blue);
+  --chart-2: var(--cyan-teal);
+  --chart-3: var(--ocean-blue-light);
+  --chart-4: var(--coral-orange);
+  --chart-5: var(--cyan-teal-light);
+  
+  /* Enhanced Sidebar */
+  --sidebar: var(--dark-navy-light);
+  --sidebar-foreground: var(--soft-grey);
+  --sidebar-primary: var(--ocean-blue);
+  --sidebar-primary-foreground: var(--soft-grey);
+  --sidebar-accent: rgba(6, 182, 212, 0.1);
+  --sidebar-accent-foreground: var(--cyan-teal);
+  --sidebar-border: rgba(148, 163, 184, 0.2);
+  --sidebar-ring: var(--cyan-teal);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, var(--dark-navy) 0%, var(--dark-navy-darker) 50%, var(--dark-navy-light) 100%);
+    background-attachment: fixed;
+  }
+
+  /* Glassmorphism utility classes */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-card {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Glow effects for interactive elements */
+  .glow-hover:hover {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .glow-focus:focus {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+    outline: none;
+  }
+
+  /* Wave animation for background */
+  .ocean-waves::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 25% 25%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(30, 58, 138, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Enhanced scrollbar styling for dark theme */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(6, 182, 212, 0.3) rgba(30, 41, 59, 0.2);
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgba(30, 41, 59, 0.2);
+    border-radius: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgba(6, 182, 212, 0.3);
+    border-radius: 4px;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: rgba(6, 182, 212, 0.5);
+  }
+
+  *::-webkit-scrollbar-corner {
+    background: rgba(30, 41, 59, 0.2);
+  }
+
+  /* ScrollArea specific styling */
+  [data-slot="scroll-area"] {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(6, 182, 212, 0.5) rgba(30, 41, 59, 0.4);
+  }
+
+  [data-slot="scroll-area-scrollbar"] {
+    background: rgba(30, 41, 59, 0.4);
+    width: 10px !important;
+  }
+
+  [data-slot="scroll-area-thumb"] {
+    background: rgba(6, 182, 212, 0.5) !important;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 6px;
+  }
+
+  [data-slot="scroll-area-thumb"]:hover {
+    background: rgba(6, 182, 212, 0.8) !important;
+    box-shadow: 0 0 8px rgba(6, 182, 212, 0.4);
+  }
+
+  /* ARGO Data Assistant (Sidebar) scroll styling */
+  .argo-assistant-scroll [data-slot="scroll-area-thumb"] {
+    background: rgba(52, 211, 153, 0.5) !important;
+  }
+
+  .argo-assistant-scroll [data-slot="scroll-area-thumb"]:hover {
+    background: rgba(52, 211, 153, 0.8) !important;
+    box-shadow: 0 0 8px rgba(52, 211, 153, 0.4);
+  }
+
+  /* Ocean Workspace scroll styling */
+  .ocean-workspace-scroll [data-slot="scroll-area-thumb"] {
+    background: rgba(6, 182, 212, 0.5) !important;
+  }
+
+  .ocean-workspace-scroll [data-slot="scroll-area-thumb"]:hover {
+    background: rgba(6, 182, 212, 0.8) !important;
+    box-shadow: 0 0 8px rgba(6, 182, 212, 0.4);
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
